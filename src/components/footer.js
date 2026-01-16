@@ -34,17 +34,17 @@ export default function Footer(){
                     <h3 className="text-lg font-bold text-white ">Connect With Me</h3>
                     <div className="flex gap-4 pt-3">
                         <Link href="https://www.linkedin.com/in/muhammad-waqas-bashir/" 
-                            className="w-10 h-10 p-2 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
                             <Linkedin size={24} />
                         </Link>
 
                         <Link href="https://github.com/Waqas106" 
-                            className="w-10 h-10 p-2 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
                             <Github size={24} />
                         </Link>
 
                         <Link href="mailto:m.waqasbashir33@gmail.com" 
-                            className="w-10 h-10 p-2 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
                             <Mail size={24} />
                         </Link>
                     </div>

@@ -1,5 +1,8 @@
+'use client'
+
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"
 import Link from "next/link"
+import { useForm } from "react-hook-form";
 
 export default function Contact(){
     const contact=[
@@ -19,6 +22,18 @@ export default function Contact(){
             value:"Islamabad, Pakistan"
         }
     ]
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm();
+
+    const onSubmit=(data)=>{
+
+    }
+
     return(
         <section id="contact" className="px-6 md:px-12 py-10 bg-gray-100">
             <div className=" py-2  text-center">
@@ -45,17 +60,17 @@ export default function Contact(){
                         <h3 className="text-lg font-bold">Connect With Me</h3>
                         <div className="flex gap-4 pt-3">
                             <Link href="https://www.linkedin.com/in/muhammad-waqas-bashir/" 
-                            className="w-10 h-10 p-2 bg-blue-600/20 rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-white rounded-full shadow-2xl text-blue-600 hover:scale-110 transition-all duration-300">
                             <Linkedin size={24} />
                             </Link>
 
                             <Link href="https://github.com/Waqas106" 
-                            className="w-10 h-10 p-2 bg-blue-600/20 rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-white rounded-full shadow-2xl text-black hover:scale-110 transition-all duration-300">
                             <Github size={24} />
                             </Link>
 
                             <Link href="mailto:m.waqasbashir33@gmail.com" 
-                            className="w-10 h-10 p-2 bg-blue-600/20 rounded-full hover:bg-blue-600 hover:text-white hover:scale-110 transition-all duration-300">
+                            className="p-3 bg-white rounded-full shadow-2xl text-red-400 hover:scale-110 transition-all duration-300">
                             <Mail size={24} />
                             </Link>
                             
@@ -63,26 +78,79 @@ export default function Contact(){
                     </div>
                 </div>
                 <div >
-                    <form className="flex flex-col gap-4 bg-white px-8 py-6 rounded-xl shadow-md">
-                        <div>
-                          <label className="block text-gray-900 text-sm font-medium font-semibold mb-2">Name</label>
-                         <input type="text" placeholder="Your Name" required className="bg-none px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none"/>
-                        </div>
-
-                        <div>
-                          <label className="block text-gray-900 text-sm font-medium font-semibold mb-2">Email</label>
-                         <input type="email" placeholder="Your Email" required className="bg-none px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none"/>
-                        </div>
-                        
-                        <div>
-                          <label className="block text-gray-900 text-sm font-medium font-semibold mb-2">Message</label>
-                          <textarea name="message" rows={6} placeholder="Enter Your Message" className="bg-none px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none"/>
-                        </div>
-
-                        <div>
-                            <button className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 font-semibold rounded-lg py-2 text-white mt-2 cursor-pointer">Send Message</button>
-                        </div>
-
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="flex flex-col gap-4 bg-white px-8 py-6 rounded-xl shadow-md"
+                    >
+                      <div>
+                        <label className="block text-gray-900 text-sm font-semibold mb-2">
+                          Name
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Your Name"
+                          {...register("name", { required: "Name is required" })}
+                          className="px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500"
+                        />
+                        {errors.name && (
+                          <p className="text-red-500 text-xs mt-1">
+                            {errors.name.message}
+                          </p>
+                        )}
+                      </div>
+                
+                      <div>
+                        <label className="block text-gray-900 text-sm font-semibold mb-2">
+                          Email
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="Your Email"
+                          {...register("email", {
+                            required: "Email is required",
+                            pattern: {
+                              value: /^\S+@\S+$/i,
+                              message: "Enter a valid email",
+                            },
+                          })}
+                          className="px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500"
+                        />
+                        {errors.email && (
+                          <p className="text-red-500 text-xs mt-1">
+                            {errors.email.message}
+                          </p>
+                        )}
+                      </div>
+                
+                      <div>
+                        <label className="block text-gray-900 text-sm font-semibold mb-2">
+                          Message
+                        </label>
+                        <textarea
+                          rows={6}
+                          placeholder="Enter Your Message"
+                          {...register("message", {
+                            required: "Message is required",
+                            minLength: {
+                              value: 10,
+                              message: "Message must be at least 10 characters",
+                            },
+                          })}
+                          className="px-4 py-2 w-full border-2 border-gray-300 rounded-lg outline-none focus:border-blue-500 resize-none"
+                        />
+                        {errors.message && (
+                          <p className="text-red-500 text-xs mt-1">
+                            {errors.message.message}
+                          </p>
+                        )}
+                      </div>
+                
+                      <button
+                        type="submit"
+                        className="w-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 font-semibold rounded-lg py-2 text-white mt-2 hover:opacity-90 transition"
+                      >
+                        Send Message
+                      </button>
                     </form>
                 </div>
             </div>

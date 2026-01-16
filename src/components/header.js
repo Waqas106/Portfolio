@@ -24,10 +24,13 @@ export default function Header(){
     }
 
     return(
-        <header className=" py-4 z-10 backdrop-blur bg-white/50 shadow-sm sticky top-0">
+        <header className=" py-4 z-50 backdrop-blur bg-white/50 shadow-sm sticky top-0">
             <div className="flex justify-between px-6">
                 <Link href="/">
-                  <h3 className="text-lg uppercase text-blue-600">Waqas Portfolio</h3>
+                  <h3 className="text-semibold text-lg uppercase bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-transparent bg-clip-text"
+                  >
+                    Waqas Portfolio
+                  </h3>
                 </Link>
                 <nav className="space-x-8 hidden md:flex">
                     {menuItems.map((menu)=>(

@@ -40,13 +40,13 @@ export default function Experience(){
         }
     ]
     return(
-        <section id="experience" className="px-8 md:px-12 py-10 bg-gray-100">
+        <section id="experience" className="px-8 md:px-12 py-14 bg-white">
             <div className=" py-2  text-center mb-12">
                <h2 className="text-3xl font-bold pb-3">Work Experience</h2>
                <div className="w-24 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 mx-auto"/>
             </div>
             <div className="relative">
-                {/* Timeline  */}
+                
                 <div className="absolute left-4 md:left-1/2 w-0.5 top-0 bottom-0 md:-translate-x-px bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 rounded-md"/>
                 
                 <div>
@@ -56,7 +56,7 @@ export default function Experience(){
 
                         <div className="w-6 h-6 rounded-full absolute md:left-1/2 left-1 md:-translate-x-1/2 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700"/>
 
-                        <div className="ml-6 md:ml-0 md:w-1/2 px-6 py-6 bg-white shadow-md rounded-xl space-y-2 ">
+                        <div className="ml-6 md:ml-0 md:w-1/2 px-6 py-6 bg-blue-500/8 shadow-md rounded-xl space-y-2 ">
                             <h2 className="text-lg font-bold text-gray-900">{exp.title}</h2>
                             <div className="flex flex-col sm:flex-row justify-between font-semibold gap-2">
                                  <p className="text-blue-700">{exp.company}</p>

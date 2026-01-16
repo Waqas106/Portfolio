@@ -9,12 +9,15 @@ const highlights=[
 ]
 
     return(
-        <section id="about" className="px-8 md:px-12 py-4 bg-gray-300/5">
-            <div className=" py-2  text-center">
-               <h2 className="text-3xl font-bold pb-2">About Me</h2>
-               <div className="w-24 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 mx-auto"/>
+        <section id="about" className="px-8 md:px-16 lg:px-24 py-20 bg-white">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
+              <div className="w-24 h-1.5 rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 mx-auto mb-4"></div>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Passionate developer dedicated to creating exceptional digital experiences
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 space-x-6  pt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 space-x-6">
                <div className="py-4 space-y-4">
                    <p className="text-lg">I am a passionate Full Stack Developer with a focus on building modern, scalable, and user friendly web applications. My goal is to create digital solutions that are both technically strong and simple for users to interact with.</p>
                    <p className="text-lg">With hands on expertise across the MERN stack, from crafting clean and responsive frontends to developing secure and efficient backends. I believe in clean code, best practices, and modern design principles that make every project reliable and future ready.</p>

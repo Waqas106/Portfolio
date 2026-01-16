@@ -75,7 +75,7 @@ export default function Projects(){
     const visibleProjects = showAll? projects : projects.slice(0,3);
 
     return(
-        <section id="projects" className="px-8 md:px-12 py-10 ">
+        <section id="projects" className="px-8 md:px-12 py-14 ">
             <div className=" py-2  text-center mb-12">
                <h2 className="text-3xl font-bold pb-3">Featured Projects</h2>
                <div className="w-24 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 mx-auto"/>
@@ -84,7 +84,7 @@ export default function Projects(){
             <div className="grid grid-cols-1 gap-6">
                 {visibleProjects.map((project, index)=>(
 
-                <div key={index} className={`flex flex-col gap-4 px-6 py-4 bg-white rounded-xl shadow-md ${index % 2 === 0? "md:flex-row" : "md:flex-row-reverse"}`}>
+                <div key={index} className={`flex flex-col gap-4 px-6 py-4 bg-white rounded-2xl shadow-xl ${index % 2 === 0? "md:flex-row" : "md:flex-row-reverse"}`}>
                     
                     <div className="w-full h-66 rounded-xl">
                         <Image src={project.image} alt={project.title} width={600} height={800} quality={100} 
