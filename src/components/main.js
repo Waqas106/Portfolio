@@ -59,7 +59,7 @@ export default function MainSection(){
                     Get in Touch
                   </button>
                   <button 
-                    onClick={() => window.open('/resume.pdf', '_blank')}
+                    onClick={() => window.open('/Waqas_resume.pdf', '_blank')}
                     className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold border-2 border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white shadow-md hover:shadow-lg transition-all duration-300">
                     <ExternalLink size={20} />
                     View Resume
