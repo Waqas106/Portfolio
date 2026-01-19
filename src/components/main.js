@@ -20,7 +20,7 @@ export default function MainSection(){
 
                 <h1 className="mb-4">
                   <span className="block text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                    Hi, I'm
+                    Hi, I&apos;m
                   </span>
                   <span className="block text-4xl sm:text-5xl lg:text-7xl font-extrabold">
                     <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-transparent bg-clip-text">
