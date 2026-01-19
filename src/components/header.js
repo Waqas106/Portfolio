@@ -34,7 +34,7 @@ export default function Header(){
                 </Link>
                 <nav className="space-x-8 hidden md:flex">
                     {menuItems.map((menu)=>(
-                        <Link key={menu.name} href={menu.href} className="pb-1 hover:text-blue-600 hover:border-b-2 border-blue-600">{menu.name}</Link>
+                        <Link key={menu.name} href={menu.href} className="pb-1 font-semibold hover:text-blue-600 hover:border-b-2 border-blue-600">{menu.name}</Link>
                     ))}                
                 </nav>
     

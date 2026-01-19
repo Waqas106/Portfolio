@@ -5,6 +5,7 @@ import Cadedine from "../img/cafedine.png"
 import Blog from "../img/blog.png"
 import Dashpilot from "../img/dashpilot.png"
 import Weather from "../img/weather.png"
+import Project from "../img/Project.png"
 import { Github, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
@@ -12,6 +13,23 @@ export default function Projects(){
     const[showAll, setShowAll]= useState(false);
 
     const projects=[
+        {
+            image:Project,
+            title:"Project Management Platform",
+            des:[
+                "A full-stack project management platform that helps teams organize tasks, track progress, and collaborate efficiently. Built with a clean dashboard, secure authentication, and scalable backend architecture."
+            ],
+            technologies:[
+                "React.js",
+                "Tailwind CSS",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Docker"
+            ],
+            liveLink:"https://project-management-platform-mocha.vercel.app/",
+            Github:"https://github.com/Waqas106/Project-Management-Platform"
+        },
         {
             image:Weather,
             title:"Weather App",
