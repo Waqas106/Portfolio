@@ -3,6 +3,30 @@ import { Calendar } from "lucide-react"
 export default function Experience(){
     const experiences=[
         {
+    title: 'Full Stack Developer',
+    company: 'DevSytes Technologies',
+    duration: '2025 - Present',
+    des: [
+        "Designed, developed, and maintained scalable web applications using React.js, Next.js, JavaScript, HTML, CSS, and Tailwind CSS.",
+        "Built robust backend systems with Node.js, Express.js, and MongoDB, implementing secure and efficient RESTful APIs.",
+        "Handled complete end-to-end feature development, from UI implementation to backend logic and database design.",
+        "Implemented authentication, authorization, and complex CRUD workflows following industry best practices.",
+        "Optimized application performance and ensured code quality through clean architecture and reusable components.",
+        "Collaborated on code reviews, version control, and deployment of production-ready applications."
+    ],
+    tech: [
+        "JavaScript (ES6+)",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Git/GitHub"
+    ]
+},
+
+        {
             title:'Front-end Developer Intern',
             company:'Elevvo Pathways',
             duration:'July 2025 - Aug 2025',
