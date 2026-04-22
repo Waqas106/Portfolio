@@ -5,7 +5,7 @@ import Blog from "../img/blog.png"
 import Dashpilot from "../img/dashpilot.png"
 import Weather from "../img/weather.png"
 import Project from "../img/Project.png"
-import LungsCancer from "../img/Lungs_Cancer.png"
+import LungsCancer from "../img/Lungs-Cancer.png"
 import { Github, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
