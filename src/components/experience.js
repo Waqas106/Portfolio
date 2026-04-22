@@ -24,8 +24,28 @@ export default function Experience(){
 //         "Tailwind CSS",
 //         "Git/GitHub"
 //     ]
-// },
-
+        // },
+        {
+            title: 'Full Stack Developer',
+            company: 'Innovative Solutions & Development',
+            duration: 'Jan 2026 - Present',
+            des: [
+                "Contributed to backend development using Node.js and Express.js, supporting API integration and efficient data handling.",
+                "Designed and implemented a complete product feedback module, including form handling, data submission, and dynamic UI rendering.",
+                "Integrated frontend applications with backend APIs to enable seamless real-time data flow and robust client–server communication.",
+                "Managed data retrieval and presentation on the frontend, ensuring accurate rendering and an optimized user experience."
+            ],
+            tech: [
+                "Next.js",
+                "React.js",
+                "JavaScript (ES6+)",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Tailwind CSS",
+                "Git/GitHub"
+            ]
+        },
         {
             title:'Front-end Developer Intern',
             company:'Elevvo Pathways',

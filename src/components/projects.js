@@ -1,18 +1,36 @@
 'use client'
 
 import Image from "next/image";
-import Cadedine from "../img/cafedine.png"
 import Blog from "../img/blog.png"
 import Dashpilot from "../img/dashpilot.png"
 import Weather from "../img/weather.png"
 import Project from "../img/Project.png"
+import LungsCancer from "../img/Lungs_Cancer.png"
 import { Github, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
 export default function Projects(){
     const[showAll, setShowAll]= useState(false);
 
-    const projects=[
+    const projects = [
+        {
+    image: LungsCancer,
+    title: "AI-Powered Lung Cancer Detection System",
+    des: [
+        "A web-based AI system for detecting lung cancer from CT scan images using deep learning techniques. The platform enables users to upload scans, receive automated predictions, and visualize results with highlighted regions for better interpretability."
+    ],
+    technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+        "TensorFlow/Keras",
+        "Python",
+        "Grad-CAM"
+    ],
+},
         {
             image:Project,
             title:"Project Management Platform",
@@ -73,21 +91,21 @@ export default function Projects(){
             ],
             Github:"https://github.com/Waqas106/Blog-Post-App"
         },
-        {
-            image:Cadedine,
-            title:'Cafedine Website',
-            des:[
-                "Designed and developed a responsive restaurant website using modern design principles to showcase menu, gallery, and reservation features.",
-                " Implemented dynamic content sections (menu filtering, image gallery) to improve user engagement and visual appeal."
-            ],
-            technologies:[
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-            liveLink:"https://waqas106.github.io/Design-Cafedine-Website/",
-            Github:"https://github.com/Waqas106/Design-Cafedine-Website"
-        }
+        // {
+        //     image:Cadedine,
+        //     title:'Cafedine Website',
+        //     des:[
+        //         "Designed and developed a responsive restaurant website using modern design principles to showcase menu, gallery, and reservation features.",
+        //         " Implemented dynamic content sections (menu filtering, image gallery) to improve user engagement and visual appeal."
+        //     ],
+        //     technologies:[
+        //         "HTML",
+        //         "CSS",
+        //         "JavaScript"
+        //     ],
+        //     liveLink:"https://waqas106.github.io/Design-Cafedine-Website/",
+        //     Github:"https://github.com/Waqas106/Design-Cafedine-Website"
+        // }
     ]
 
     const visibleProjects = showAll? projects : projects.slice(0,3);
