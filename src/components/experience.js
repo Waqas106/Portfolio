@@ -31,7 +31,7 @@ export default function Experience(){
             duration: 'Jan 2026 - Present',
             des: [
                 "Contributed to backend development using Node.js and Express.js, supporting API integration and efficient data handling.",
-                "Designed and implemented a complete product feedback module, including form handling, data submission, and dynamic UI rendering.",
+                "Designed and implemented a complete product module, including form handling, data submission, and dynamic UI rendering.",
                 "Integrated frontend applications with backend APIs to enable seamless real-time data flow and robust client–server communication.",
                 "Managed data retrieval and presentation on the frontend, ensuring accurate rendering and an optimized user experience."
             ],

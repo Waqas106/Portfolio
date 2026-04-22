@@ -49,21 +49,6 @@ export default function Projects(){
             Github:"https://github.com/Waqas106/Project-Management-Platform"
         },
         {
-            image:Weather,
-            title:"Weather App",
-            des:[
-                "A modern React-based weather app that automatically detects your location and displays real-time weather updates. It features a clean, responsive interface powered by the OpenWeather API for accurate forecasts."
-            ],
-            technologies:[
-                "React.js",
-                "Tailwind CSS",
-                "Axios",
-                "OpenWeather API"
-            ],
-            liveLink:"weather-app-one-xi-51.vercel.app",
-            Github:"https://github.com/Waqas106/Weather_App"
-        },
-        {
             image:Dashpilot,
             title:"DashPilot – Freelancer Dashboard App",
             des:[
@@ -77,6 +62,21 @@ export default function Projects(){
             ],
             liveLink:"https://waqas106.github.io/DashPilot-Freelancer-Dashboard/",
             Github:"https://github.com/Waqas106/DashPilot-Freelancer-Dashboard"
+        },
+        {
+            image:Weather,
+            title:"Weather App",
+            des:[
+                "A modern React-based weather app that automatically detects your location and displays real-time weather updates. It features a clean, responsive interface powered by the OpenWeather API for accurate forecasts."
+            ],
+            technologies:[
+                "React.js",
+                "Tailwind CSS",
+                "Axios",
+                "OpenWeather API"
+            ],
+            liveLink:"weather-app-one-xi-51.vercel.app",
+            Github:"https://github.com/Waqas106/Weather_App"
         },
         {
             image:Blog,
