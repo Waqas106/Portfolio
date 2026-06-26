@@ -6,6 +6,8 @@ import Dashpilot from "../img/dashpilot.png"
 import Weather from "../img/weather.png"
 import Project from "../img/Project.png"
 import LungsCancer from "../img/Lungs-Cancer.png"
+import FIXnGO from "../img/carServices.png"
+import LandVenture from "../img/LandVenture.png"
 import { Github, ExternalLink } from "lucide-react";
 import { useState } from "react";
 
@@ -13,6 +15,43 @@ export default function Projects(){
     const[showAll, setShowAll]= useState(false);
 
     const projects = [
+    {
+    image: LandVenture,
+    title: "LandVenture – Premium Land Marketplace",
+    des: [
+        "A modern real estate marketplace platform tailored for the Pakistan market, enabling buyers, sellers, and agents to list, discover, and inquire about premium land properties. Features role-based dashboards, advanced property filters, and a scalable architecture built for production."
+    ],
+    technologies: [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Supabase",
+        "PostgreSQL",
+        "Zod",
+        "Vercel",
+        "Lucide React",
+    ],
+},
+    {
+    image: FIXnGO,
+    title: "FIXnGO – Car Services Booking Platform",
+    des: [
+        "A full-featured car services booking platform that connects vehicle owners with trusted service providers. Users can browse services, book appointments, track service status in real-time, and manage their vehicle history — all through a clean and intuitive interface."
+    ],
+    technologies: [
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Ant Design",
+        "Redux Toolkit",
+        "React Query",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs",
+    ],
+},
         {
     image: LungsCancer,
     title: "AI-Powered Lung Cancer Detection System",
@@ -78,19 +117,19 @@ export default function Projects(){
             liveLink:"weather-app-one-xi-51.vercel.app",
             Github:"https://github.com/Waqas106/Weather_App"
         },
-        {
-            image:Blog,
-            title:"Blog Post Website",
-            des:[
-                'A single-page blog application with dynamic post filtering and a “Show More” feature for seamless content browsing. Built with clean UI and optimized logic to manage post display and responsive user experience.'
-            ],
-            technologies:[
-                "JavaScript (ES6+)",
-                "React.js",
-                "CSS"
-            ],
-            Github:"https://github.com/Waqas106/Blog-Post-App"
-        },
+        // {
+        //     image:Blog,
+        //     title:"Blog Post Website",
+        //     des:[
+        //         'A single-page blog application with dynamic post filtering and a “Show More” feature for seamless content browsing. Built with clean UI and optimized logic to manage post display and responsive user experience.'
+        //     ],
+        //     technologies:[
+        //         "JavaScript (ES6+)",
+        //         "React.js",
+        //         "CSS"
+        //     ],
+        //     Github:"https://github.com/Waqas106/Blog-Post-App"
+        // },
         // {
         //     image:Cadedine,
         //     title:'Cafedine Website',

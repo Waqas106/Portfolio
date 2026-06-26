@@ -28,7 +28,7 @@ export default function Experience() {
         {
             title: 'Full Stack Developer',
             company: 'Innovative Solutions & Development',
-            duration: 'Mar 2026 - Present',
+            duration: 'Jan 2026 - Present',
             des: [
                 "Contributed to backend development using Node.js and Express.js, supporting API integration and efficient data handling.",
                 "Designed and implemented a complete product module, including form handling, data submission, and dynamic UI rendering.",
@@ -38,6 +38,7 @@ export default function Experience() {
             tech: [
                 "Next.js",
                 "React.js",
+                "React Query",
                 "JavaScript (ES6+)",
                 "Node.js",
                 "Express.js",
