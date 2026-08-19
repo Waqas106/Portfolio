@@ -1,138 +1,56 @@
-import { Calendar } from "lucide-react"
+import { Section } from "./Section";
+import { experienceData } from "../data/mock-data";
 
 export default function Experience() {
-    const experiences = [
-        //     {
-        // title: 'Full Stack Developer',
-        // company: 'DevSytes Technologies',
-        // duration: '2025 - Present',
-        // des: [
-        //     "Designed, developed, and maintained scalable web applications using React.js, Next.js, JavaScript, HTML, CSS, and Tailwind CSS.",
-        //     "Built robust backend systems with Node.js, Express.js, and MongoDB, implementing secure and efficient RESTful APIs.",
-        //     "Handled complete end-to-end feature development, from UI implementation to backend logic and database design.",
-        //     "Implemented authentication, authorization, and complex CRUD workflows following industry best practices.",
-        //     "Optimized application performance and ensured code quality through clean architecture and reusable components.",
-        //     "Collaborated on code reviews, version control, and deployment of production-ready applications."
-        // ],
-        //     tech: [
-        //         "JavaScript (ES6+)",
-        //         "React.js",
-        //         "Next.js",
-        //         "Node.js",
-        //         "Express.js",
-        //         "MongoDB",
-        //         "Tailwind CSS",
-        //         "Git/GitHub"
-        //     ]
-        // },
-        {
-            title: 'Full Stack Developer',
-            company: 'Innovative Solutions & Development',
-            duration: 'Jan 2026 - Present',
-            des: [
-                "Contributed to backend development using Node.js and Express.js, supporting API integration and efficient data handling.",
-                "Designed and implemented a complete product module, including form handling, data submission, and dynamic UI rendering.",
-                "Integrated frontend applications with backend APIs to enable seamless real-time data flow and robust client–server communication.",
-                "Managed data retrieval and presentation on the frontend, ensuring accurate rendering and an optimized user experience."
-            ],
-            tech: [
-                "Next.js",
-                "React.js",
-                "React Query",
-                "JavaScript (ES6+)",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "Tailwind CSS",
-                "Git/GitHub"
-            ]
-        },
-        {
-            title: 'Front-end Developer Intern',
-            company: 'Elevvo Pathways',
-            duration: 'July 2025 - Aug 2025',
-            des: [
-                "Developed and optimized responsive user interfaces using React.js, Next.js, and Tailwind CSS, ensuring seamless cross-device performance.",
-                "Built landing pages and admin dashboards with a focus on modern UI/UX best practices for improved user experience.",
-                "Integrated RESTful APIs to enable dynamic data handling and efficient client–server communication.",
-                "Deployed production-ready applications on Vercel and managed collaborative workflows using Git and GitHub.",
-                "Enhanced problem-solving and debugging skills through active participation in code reviews and real-time feedback."
-            ],
-            tech: [
-                "JavaScript(ES6+)",
-                "React.js",
-                "Tailwind CSS",
-                "Git/GitHub"
-            ]
-        },
-        {
-            title: 'Full Stack Developer',
-            company: 'Ezitech Institute',
-            duration: 'March 2025 - June 2025',
-            des: [
-                "Applied core concepts of Node.js, Express.js, and MongoDB to develop functional backend services.",
-                "Designed and implemented RESTful APIs with complete CRUD operations.",
-                "Integrated frontend and backend to ensure smooth data flow and real-time interaction.",
-                "Collaborated in a team environment, maintaining clean, modular, and scalable code practices."
-            ],
-            tech: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Node.js",
-                "Express.js"
-            ]
-        }
-    ]
-    return (
-        <section id="experience" className="px-8 md:px-12 py-14 bg-white">
-            <div className=" py-2  text-center mb-12">
-                <h2 className="text-3xl font-bold pb-3">Work Experience</h2>
-                <div className="w-24 h-1 rounded-full bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 mx-auto" />
+  const jobs = experienceData.map(exp => ({
+    role: exp.title,
+    company: exp.company,
+    period: exp.duration,
+    year: exp.duration.split(' - ')[0].match(/\d+/)[0],
+    points: exp.des,
+    tags: exp.tech,
+  }));
+
+  return (
+    <Section
+      id="experience"
+      title="Work Experience"
+      subtitle="A track record of shipping production software."
+      eyebrow="Career"
+    >
+      <div className="relative space-y-6 border-l border-border pl-6 md:pl-10">
+        {jobs.map((j) => (
+          <div key={j.role + j.period} className="surface-card relative overflow-hidden p-6">
+            <span className="absolute top-8 -left-[1.85rem] size-3 rounded-full bg-primary md:-left-[3.1rem]" />
+            <span className="ghost-outline pointer-events-none absolute -top-0 right-3 text-[4.5rem] sm:text-[6rem] md:text-[7rem]">
+              {j.year}
+            </span>
+            <div className="relative flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="text-lg font-semibold">{j.role}</h3>
+              <span className="text-xs text-muted-foreground">{j.period}</span>
             </div>
-            <div className="relative">
-
-                <div className="absolute left-4 md:left-1/2 w-0.5 top-0 bottom-0 md:-translate-x-px bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700 rounded-md" />
-
-                <div>
-                    {experiences.map((exp, idx) => (
-
-                        <div key={idx} className={`relative flex mb-8 items-center ${idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} `}>
-
-                            <div className="w-6 h-6 rounded-full absolute md:left-1/2 left-1 md:-translate-x-1/2 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-700" />
-
-                            <div className="ml-6 md:ml-0 md:w-1/2 px-6 py-6 bg-blue-500/8 shadow-md rounded-xl space-y-2 ">
-                                <h2 className="text-lg font-bold text-gray-900">{exp.title}</h2>
-                                <div className="flex flex-col sm:flex-row justify-between font-semibold gap-2">
-                                    <p className="text-blue-700">{exp.company}</p>
-                                    <p className="flex text-blue-500 gap-1 items-center text-sm">
-                                        <Calendar size={16} />
-                                        {exp.duration}
-                                    </p>
-                                </div>
-                                <ul className="pl-4 space-y-2 mb-4 text-gray-700 text-sm">
-                                    {exp.des.map((des, desidx) => (
-                                        <li key={desidx}
-                                            className="list-disc marker:text-blue-600 "
-                                        >
-                                            {des}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className=" flex flex-wrap gap-2">
-                                    {exp.tech.map((tech, techidx) => (
-                                        <span key={techidx}
-                                            className="px-3 py-1 text-indigo-600 text-sm rounded-full bg-blue-500/20"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <p className="mt-1 text-sm text-primary">{j.company}</p>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              {j.points.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
+                  {p}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {j.tags.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                >
+                  {t}
+                </span>
+              ))}
             </div>
-        </section>
-    )
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
 }

@@ -1,38 +1,36 @@
-import { Lightbulb, Users, RefreshCcw  } from "lucide-react"
+import { Section } from "./Section";
+import { aboutData } from "../data/mock-data";
 
-export default function About(){
-const highlights=[
-    {icon:Lightbulb, name:'Innovation', des:'Creative problem-solving with cutting-edge solutions' },
-    {icon:Users, name:'Collaboration', des:'Strong team player with excellent communication skills'},
-    {icon:RefreshCcw, name:'Adaptability', des:'Quick to learn, adjust, and deliver in evolving environments.'},
-    {icon:Lightbulb, name:'Problem Solving', des:'Turning complex challenges into simple, effective solutions.'},
-]
+export default function About() {
+  const details = [
+    { k: "Based in", v: "Pakistan · Available worldwide (remote)" },
+    { k: "Focus", v: "MERN, Next.js, TypeScript, Electron desktop apps" },
+    { k: "Ways to work", v: "Full-time roles · Freelance projects · Retainers" },
+  ];
 
-    return(
-        <section id="about" className="px-8 md:px-16 lg:px-24 py-20 bg-white">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Me</h2>
-              <div className="w-24 h-1.5 rounded-full bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 mx-auto mb-4"></div>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Passionate developer dedicated to creating exceptional digital experiences
-              </p>
+  return (
+    <Section
+      id="about"
+      title="Behind the Build"
+      subtitle="How I work, what I care about, and the way I approach every project."
+      eyebrow="About Me"
+    >
+      <div className="grid gap-6 md:grid-cols-5">
+        <div className="surface-card space-y-4 p-6 text-sm leading-relaxed text-muted-foreground md:col-span-3">
+          {aboutData.description.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+        </div>
+
+        <div className="grid gap-4 md:col-span-2">
+          {details.map((item) => (
+            <div key={item.k} className="surface-card p-5">
+              <p className="text-xs tracking-widest text-primary uppercase">{item.k}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{item.v}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 space-x-6">
-               <div className="py-4 space-y-4">
-                   <p className="text-lg">I am a passionate Full Stack Developer with a focus on building modern, scalable, and user friendly web applications. My goal is to create digital solutions that are both technically strong and simple for users to interact with.</p>
-                   <p className="text-lg">With hands on expertise across the MERN stack, from crafting clean and responsive frontends to developing secure and efficient backends. I believe in clean code, best practices, and modern design principles that make every project reliable and future ready.</p>
-                   <p className="text-lg">Beyond coding, I value collaboration and continuous learning. I enjoy solving problems, sharing ideas, and turning concepts into meaningful digital experiences that create real impact.</p>
-               </div>
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {highlights.map((highlight, index)=>(
-                    <div key={index} className="px-6 py-3 bg-white rounded-xl shadow-lg hover:scale-102">
-                        <highlight.icon size={38}  className="p-2 mb-2 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 rounded-md"/>
-                        <h4 className="font-semibold text-md pb-2">{highlight.name}</h4>
-                        <p>{highlight.des}</p>
-                    </div>
-                ))}
-               </div>
-            </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
 }

@@ -1,60 +1,47 @@
-'use client'
+'use client';
 
-import { Github, Linkedin, Mail } from "lucide-react"
-import Link from "next/link"
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import Link from "next/link";
+import { contactData } from "../data/mock-data";
 
-export default function Footer(){
-    return(
-        <footer className="bg-gray-900 px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 className="text-lg font-bold text-white pb-3">Waqas Bashir</h3>
-                    <p className="text-gray-400">passionate Full Stack Developer with a focus on building modern, scalable, and user friendly web applications. </p>
-                </div>
-                <div>
-                    <h3 className="text-lg font-bold text-white pb-3">Quick Links</h3>
-                    <div className="space-y-2">
-                        {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((links)=>(
-                            <button 
-                            key={links} 
-                            onClick={()=>{
-                                const element = document.getElementById(links.toLowerCase());
-                                if (element){
-                                    element.scrollIntoView({behavior: 'smooth'});
-                                }
-                            }}
-                            className="block text-gray-400 hover:text-white transition-colors duration-200"
-                            >
-                                {links}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <h3 className="text-lg font-bold text-white ">Connect With Me</h3>
-                    <div className="flex gap-4 pt-3">
-                        <Link href="https://www.linkedin.com/in/muhammad-waqas-bashir/" 
-                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
-                            <Linkedin size={24} />
-                        </Link>
-
-                        <Link href="https://github.com/Waqas106" 
-                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
-                            <Github size={24} />
-                        </Link>
-
-                        <Link href="mailto:m.waqasbashir33@gmail.com" 
-                            className="p-3 bg-gray-400/20 rounded-full hover:bg-blue-600 text-white hover:scale-110 transition-all duration-300">
-                            <Mail size={24} />
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            <br/>
-            <div className="flex flex-wrap justify-between text-sm text-gray-400 text-center">
-                <p>Designed and Developed with &hearts; by Waqas</p>
-                <p>&copy; 2025. All rights Reserved</p>
-            </div>
-        </footer>
-    )
+export default function Footer() {
+const contactLinks=[
+  {icon: Github, link:"https://github.com/Waqas106"},
+  {icon: Linkedin, link:"https://linkedin.com/in/muhammad-waqas-bashir"},
+  {icon: Mail, link:"mailto:m.waqasbashir33@gmail.com"},
+]
+  return (
+    <footer className="relative overflow-hidden border-t border-border bg-card/50">
+      <span className="ghost-word absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[3.5rem] sm:text-[6rem] md:text-[9rem]">
+        Waqas
+      </span>
+      <div className="relative mx-auto flex max-w-6xl flex-col md:flex-row items-center md:justify-between gap-5 px-4 py-10 text-center">
+        <div className="items-center md:items-start!"> 
+        <p className="font-display text-lg font-bold">Waqas Bashir</p>
+        <p className="max-w-sm text-sm text-muted-foreground">
+          Full Stack Developer building scalable, user-friendly web and desktop applications.
+        </p>
+        </div>
+        <div> 
+        <div className="flex gap-3">
+          {contactLinks.map((ctn, i) => (
+            <Link
+              key={i}
+              href={ctn.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex size-9 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground hover:text-foreground"
+            >
+              <ctn.icon className="size-4" />
+            </Link>
+          ))}
+        </div>
+        <p className="relative  py-5 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Waqas Bashir. All rights reserved.
+      </p>
+        </div>
+      </div>
+      
+    </footer>
+  );
 }
