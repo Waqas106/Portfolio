@@ -64,23 +64,42 @@ export const experienceData = [
 
 export const projectsData = [
   {
-    image: "/LandVenture.png",
-    title: "LandVenture – Premium Land Marketplace",
+    // Add your screenshot at public/pos.png, or change this path to its final URL.
+    image: "/pos.png",
+    title: "Point of Sale (POS) Desktop App",
     des: [
-      "A modern real estate marketplace platform tailored for the Pakistan market, enabling buyers, sellers, and agents to list, discover, and inquire about premium land properties. Features role-based dashboards, advanced property filters, and a scalable architecture built for production."
+      "An Electron.js point-of-sale desktop app designed to make day-to-day retail sales straightforward for store staff. It brings the core sales workflow into a focused desktop experience that is easy to use at the counter.",
+      "The app is built for offline-capable operation, so essential work can continue during internet interruptions. This helps stores keep serving customers without depending on a constant connection.",
+      "It also supports a consistent workflow across multiple branches, giving teams a reliable tool for everyday operations in each location."
+    ],
+    technologies: ["Electron.js", "JavaScript"],
+    // Add a URL when a live or staging version is available.
+    liveLink: "",
+    stageLink: "",
+  },
+  {
+    // Add your screenshot at public/prodoo.png, or replace this with its final image URL.
+    image: "/prodoo.png",
+    title: "ProDoo – Freelancing Platform",
+    des: [
+      "ProDoo is a global freelancing platform that connects independent professionals with clients looking for skilled talent. Freelancers can showcase their expertise and discover opportunities, while clients can search for people who fit their projects.",
+      "The platform brings project collaboration into one place, with tools for communication, milestones, and payments that support work from hiring through delivery."
     ],
     technologies: [
-      "Next.js 14",
-      "TypeScript",
+      "React.js",
+      "Vite",
       "Tailwind CSS",
-      "shadcn/ui",
-      "Supabase",
-      "PostgreSQL",
-      "Zod",
-      "Vercel",
-      "Lucide React",
+      "Ant Design",
+      "Redux Toolkit",
+      "React Query",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
     ],
+    liveLink: "https://prodoo.com/",
   },
+  
   {
     image: "/carServices.png",
     title: "FIXnGO – Car Services Booking Platform",
@@ -98,6 +117,25 @@ export const projectsData = [
       "Express.js",
       "MongoDB",
       "REST APIs",
+    ],
+    // liveLink: "http://fixngo.prodoo.com/",
+  },
+  {
+    image: "/LandVenture.png",
+    title: "LandVenture – Premium Land Marketplace",
+    des: [
+      "A modern real estate marketplace platform tailored for the Pakistan market, enabling buyers, sellers, and agents to list, discover, and inquire about premium land properties. Features role-based dashboards, advanced property filters, and a scalable architecture built for production."
+    ],
+    technologies: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Supabase",
+      "PostgreSQL",
+      "Zod",
+      "Vercel",
+      "Lucide React",
     ],
   },
   {
@@ -150,21 +188,21 @@ export const projectsData = [
     liveLink: "https://waqas106.github.io/DashPilot-Freelancer-Dashboard/",
     github: "https://github.com/Waqas106/DashPilot-Freelancer-Dashboard"
   },
-  {
-    image: "/weather.png",
-    title: "Weather App",
-    des: [
-      "A modern React-based weather app that automatically detects your location and displays real-time weather updates. It features a clean, responsive interface powered by the OpenWeather API for accurate forecasts."
-    ],
-    technologies: [
-      "React.js",
-      "Tailwind CSS",
-      "Axios",
-      "OpenWeather API"
-    ],
-    liveLink: "weather-app-one-xi-51.vercel.app",
-    github: "https://github.com/Waqas106/Weather_App"
-  }
+  // {
+  //   image: "/weather.png",
+  //   title: "Weather App",
+  //   des: [
+  //     "A modern React-based weather app that automatically detects your location and displays real-time weather updates. It features a clean, responsive interface powered by the OpenWeather API for accurate forecasts."
+  //   ],
+  //   technologies: [
+  //     "React.js",
+  //     "Tailwind CSS",
+  //     "Axios",
+  //     "OpenWeather API"
+  //   ],
+  //   liveLink: "https://weather-app-one-xi-51.vercel.app",
+  //   github: "https://github.com/Waqas106/Weather_App"
+  // }
 ];
 
 export const skillsData = [
